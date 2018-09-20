@@ -1,0 +1,48 @@
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+
+hr {
+  padding: 0;
+  margin: 5px auto;
+  max-width: 60%;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0;
+}
+
+.words {
+  /* display: flex; */
+  /* padding-bottom: 5px; */
+}
+
+.eng {
+  color: red;
+  /* border: 1px solid white; */
+  display: inline-block;
+}
+
+.cz {
+  color: green;
+  /* border: 1px solid yellow; */
+  display: inline-block;
+}
+
+/* .note {
+  border: 1px solid blue;
+} */
+
+.fcas {
+  padding-left: 1em;
+}
+
+.scas {
+  padding-left: 2em;
+}
+.tcas {
+  padding-left: 3em;
+}

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="http://r28.cz/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://r28.cz/css/r28.css">
+    <title>R28 - zápisníček - HTML</title>
+  </head>
+  <body>
+  <div class="container jumbotron">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link" href="http://r28.cz/">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="http://r28.cz/content/english-words.html">English</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://r28.cz/content/html/html-instructions.html">HTML</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="http://r28.cz/content/html/metods.html">Python</a>
+      </li>
+    </ul>
+    </div>
+    <div class="jumbotron container">
+      <h1 class="text-center">Metods List</h1>
+
+      <h2>String Methods - Joining & Splitting</h2>
+
+      <h6>.count()</h6>
+      <p>Sequence types in Python implement .count() method. This method is used to determine the number of occurences of designated object in a sequence:</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>s='AbbcabbA'</div>
+            <div>s.count('a')</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 1</span>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.join(iterable)</h6>
+      <p>We want to use join() method to concatenate collection of strings. join() method is a highly optimized equivalent to string concatenation. String (str) on which the operation is performed is actually a delimiter which is inserted between the items contained in the iterable argument.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>', '.join(['1','2','3'])</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"></span><span class="cz">results is '1, 2, 3'</span>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.split(sep=None, maxsplit=-1)</h6>
+      <p>We could say that split() method is opposite to join() method. Join() glues together a collection of strings using a delimiter, meanwhile split() chops the string into a list of strings.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'1 2 3'.split()</div>
+            <div>'1,2,3'.split(',')</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"></span><span class="cz">results is ['1','2','3']</span>
+          <div><span class="eng"></span><span class="cz">results is ['1','2','3']</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.splitlines([keepends])</h6>
+      <p>splitlines() method splits the string on line end delimiters. There are multiple characters used to mark the end of a line (e.g. \n,\r)</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'This is the first line\nThis is the second line'.splitlines()</div>
+            <div>'This is the first line\nThis is the second line'.splitlines(keepends = True)</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"></span><span class="cz">results is ['This is the first line','This is the second line']</span>
+          <div><span class="eng"></span><span class="cz">results is ['This is the first line\n',This is the second line']</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.partition(separator)</h6>
+      <p>The partition() method is used idiomatically to get rid of separators, which are stored in dummy variable (often for the name of dummy variable is used underscore symbol: _. Dummy variable is not later used in the code.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'Big&Small'.partition('&')</div>
+            <div>'up-to-date'.partition('-')</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"></span><span class="cz">results is ('Big', '&'', 'Small')</span>
+          <div><span class="eng"></span><span class="cz">results is ('up', '-', 'to-date')</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h2>String Methods - Replacing & Removing</h2>
+
+      <h6>str.replace(what,forwhat)</h6>
+      <p>Replaces a substring for another substring inside the operated string.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'Race'.replace('R','F')</div>
+            <div>'Race'.replace('b','c')</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 'Face'</span>
+          <div><span class="eng"><span class="cz">results is 'Race'</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.strip(chars)</h6>
+      <p>The chars argument is a string representing all characters to be removed from the end or the beginning of the string:</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>' too many spaces '.strip()</div>
+            <div>'www.engeto.com'.strip('.cmow')</div>
+            <div>'Entire line\n'.strip('n')</div>
+            <div>'Entire line\n'.strip('\n')</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 'too many spaces'</span>
+          <div><span class="eng"><span class="cz">results is 'enget'</span></div>
+          <div><span class="eng"><span class="cz">results is 'Entire line\n'</span></div>
+          <div><span class="eng"><span class="cz">results is 'Entire line'</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.lstrip(chars)</h6>
+      <p>The chars argument is a string representing all characters to be removed from the beginning of the string:</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>"www.engeto.com".lstrip('.cmow')</div>
+            <div>'\tEntire line\n'.lstrip()</div>
+            <div>&nbsp;</div>
+            <div>' too many spaces '.lstrip()</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 'engeto.com'</span>
+          <div><span class="eng">Characters \t or \n are considered whitespace as well as ' ': <span class="cz">results is 'Entire line\n'</span></div>
+          <div><span class="eng"><span class="cz">results is 'too many spaces '</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.rstrip(chars)</h6>
+      <p>The chars argument is a string representing all characters to be removed from the end of the string:</p>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>"www.engeto.com".rstrip('.cmow')</div>
+            <div>'\tEntire line\n'.rstrip()</div>
+            <div>&nbsp;</div>
+            <div>' too many spaces '.rstrip()</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 'www.enget'</span>
+          <div><span class="eng">Characters \t or \n are considered whitespace as well as ' ': <span class="cz">results is '\tEntire line'</span></div>
+          <div><span class="eng"><span class="cz">results is ' too many spaces'</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h2>String Methods - Finding Strings</h2>
+
+      <h6>str.startswith(substr[,start[,end]])</h6>
+      <p>We are asking, whether a specific string starts with a specific character respectively sequence of characters</p>
+      <ul>
+        <li>substr - Substring or sigle character we are looking for</li>
+        <li>start - Integer specifying the index at which we want the check to begin</li>
+        <li>end - Integer specifying the index at which we want the check to end</li>
+      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'Python'.startswith('P')</div>
+            <div>'Python'.startswith('Py')</div>
+            <div>'Python'.startswith('t',2)</div>
+            <div>'Python'.startswith('t',2,4)</div>
+            <div>'Python'.startswith('t',1)</div>
+            <div>'Python'.startswith('th',2)</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is True</span>
+          <div><span class="eng"><span class="cz">results is True</span></div>
+          <div><span class="eng"><span class="cz">results is True</span></div>
+          <div><span class="eng"><span class="cz">results is True</span></div>
+          <div><span class="eng"><span class="cz">results is False</span></div>
+          <div><span class="eng"><span class="cz">results is True</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.endswith(substr[,start[,end]])</h6>
+      <p>Similar to str.startswith with the difference, this method is checking, whether a string ends with substring substr.</p>
+      <hr>
+
+      <h6>str.find(sub[, start[, end]])</h6>
+      <p>Looks for the first occurence of a substring in a string. We can optionally specify the range, where the lookup should begin and end. If the substring was not found, value -1 is returned. Find is a very expensive operation. Compare with str.index(), which raises error instead of returning -1 if value not found.</p>
+      <ul>
+        <li>sub - Substring or single character we are looking for</li>
+        <li>start - Integer specifying the index at which we want the check to begin</li>
+        <li>end - Integer specifying the index at which we want the check to end</li>
+      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'anamgram'.find('a')</div>
+            <div>'anamgram'.find('a',1)</div>
+            <div>'anamgram'.find('m')</div>
+            <div>'anamgram'.find('h')</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is index 0</span>
+          <div><span class="eng"><span class="cz">results is index 2</span></div>
+          <div><span class="eng"><span class="cz">results is index 3</span></div>
+          <div><span class="eng"><span class="cz">results is index -1</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.rfind(substr[,start[,end]])</h6>
+      <p>The rfind() method works the same as the find() method with the difference that the search begins from the right side and the index returned is the first position from the end, where the substring has been found</p>
+      <ul>
+        <li>substr - Substring or single character we are looking for</li>
+        <li>start - Integer specifying the index at which we want the check to begin</li>
+        <li>end - Integer specifying the index at which we want the check to end</li>
+      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'anagram'.rfind('a')</div>
+            <div>'anagram'.rfind('a',3)</div>
+            <div>'anagram'.rfind('a',5)</div>
+            <div>'anagram'.rfind('a',6)</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is index 5</span>
+          <div><span class="eng"><span class="cz">results is index 5</span></div>
+          <div><span class="eng"><span class="cz">results is index 5</span></div>
+          <div><span class="eng"><span class="cz">results is index -1</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h2>String Methods - Character Case</h2>
+
+      <h6>str.upper()</h6>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'abc'.upper()</div>
+            <div>'abC'.upper()</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 'ABC'</span>
+          <div><span class="eng"><span class="cz">results is 'ABC'</span></div>
+        </div>
+      </div>
+      <hr>
+
+      <h6>str.lower()</h6>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>'Mr. Jones PhD.'.lower()</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">results is 'mr. jones phd'</span>
+        </div>
+      </div>
+      <hr>
+
+
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+    </div> -->
+
+      <!-- <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div> -->
+      <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div>
+      <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div>
+      <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div>
+
+
+      <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+
+      <script src="http://r28.cz/js/jquery-3.3.1.slim.min.js"></script>
+      <script src="http://r28.cz/js/popper.min.js"></script>
+      <script src="http://r28.cz/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

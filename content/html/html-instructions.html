@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="http://r28.cz/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://r28.cz/css/r28.css">
+    <title>R28 - zápisníček - HTML</title>
+  </head>
+  <body>
+  <div class="container jumbotron">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link" href="http://r28.cz/">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="http://r28.cz/content/english-words.html">English</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="http://r28.cz/content/html/html-instructions.html">HTML</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://r28.cz/content/python/metods.html">Python</a>
+      </li>
+    </ul>
+    </div>
+    <div class="jumbotron container">
+      <h1 class="text-center">HTML</h1>
+      <h2>Struktura HTML</h2>
+      <code class="text-left">
+        <div>&lt;!doctype html&gt;</div>
+        <div>&lt;html lang="cs"&gt;</div>
+        <div class="fcas">&lt;head&gt;</div>
+        <div class="scas">&lt;meta charset="utf-8"&gt;</div>
+        <div class="scas">&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;</div>
+        <div class="scas">&lt;link rel="stylesheet" href=""&gt;</div>
+        <div class="scas">&lt;title&gt;&lt;/title&gt;</div>
+        <div class="fcas">&lt;/head&gt;</div>
+        <div class="fcas">&lt;body&gt;<br><br>&lt;/body&gt;</div>
+        <div>&lt;/html&gt;</div>
+      </code>
+      <h2>Nedělitelná mezera</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>&amp;nbsp;</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng"><span class="cz">nedělitelná mezera HTML</span>
+        </div>
+      </div>
+
+      <h2>Poznámka v HTML</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>&lt;!-- poznámka --&gt;</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <span class="eng">CTRL + /</span> - <span class="cz">poznámka v Atomu</span>
+        </div>
+      </div>
+
+      <h2>Tučný a kurzíva text</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>&lt;strong&gt;&lt;/strong&gt;</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <strong>strong</strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <code>
+            <div>&lt;em&gt;&lt;/em&gt;</div>
+          </code>
+        </div>
+        <div class="col-md-6">
+          <em>emphasized</em>
+        </div>
+      </div>
+      <h2>Seznamy</h2>
+        <h6>Řazený seznam (ordered list)</h6>
+        <code>
+          <div>&lt;ol&gt;</div>
+          <div class="fcas">&lt;li&gt;&lt;/li&gt;</div>
+          <div>&lt;/ol&gt;</div>
+        </code>
+        <h6>Neřazený seznam (unordered list)</h6>
+        <code>
+          <div>&lt;ul&gt;</div>
+          <div class="fcas">&lt;li&gt;&lt;/li&gt;</div>
+          <div>&lt;/ul&gt;</div>
+        </code>
+        <h6>Vnořený seznam (nested list)</h6>
+        <div class="row">
+          <div class="col-md-6">
+            <code>
+              <div>&lt;ol&gt;</div>
+                <div class="fcas">&lt;li&gt;&lt;/li&gt;</div>
+                <div class="fcas">&lt;li&gt;&lt;/li&gt;</div>
+                <div class="fcas">&lt;ul&gt;</div>
+                  <div class="scas">&lt;li&gt;&lt;/li&gt;</div>
+                  <div class="scas">&lt;li&gt;&lt;/li&gt;</div>
+                  <div class="scas">&lt;ol&gt;</div>
+                    <div class="tcas">&lt;li&gt;&lt;/li&gt;</div>
+                  <div class="scas">&lt;/ol&gt;</div>
+                <div class="fcas">&lt;/ul&gt;</div>
+              <div>&lt;/ol&gt;</div>
+            </code>
+          </div>
+          <div class="col-md-6">
+            <ol>
+              <li>Item one</li>
+              <li>Item two</li>
+              <ul>
+                <li>Nested one</li>
+                <li>Nested two</li>
+                <ol>
+                  <li><strong>Whoah nested</strong></li>
+                </ol>
+              </ul>
+            </ol>
+          </div>
+        </div>
+        <h2>Obrázky</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <code>
+              <div>&lt;img src="" alt=""&gt;</div>
+              <div>&lt;a href=""&gt;&lt;/a&gt;</div>
+              <div>&lt;a href=""&gt;&lt;img src="" alt=""&gt;&lt;/a&gt;</div>
+            </code>
+          </div>
+          <div class="col-md-6">
+            <img src="http://r28.cz/images/bizar.gif" alt="BIZÁR" width="220px">
+          <div><a href="http://www.r28.cz">r28.cz</a></div>
+          </div>
+        </div>
+        <h2>Tabulky</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <code>
+              <div>&lt;table&gt;</div>
+                <div class="fcas">&lt;thead&gt;</div>
+                  <div class="scas">&lt;th&gt;&lt;/th&gt;</div>
+                  <div class="scas">&lt;th&gt;&lt;/th&gt;</div>
+                <div class="fcas">&lt;/thead&gt;</div>
+                <div class="fcas">&lt;tr&gt;</div>
+                  <div class="scas">&lt;td&gt;&lt;/td&gt;</div>
+                  <div class="scas">&lt;td&gt;&lt;/td&gt;</div>
+                <div class="fcas">&lt;/tr&gt;</div>
+                <div class="fcas">&lt;tr&gt;</div>
+                  <div class="scas">&lt;td&gt;&lt;/td&gt;</div>
+                  <div class="scas">&lt;td&gt;&lt;/td&gt;</div>
+                <div class="fcas">&lt;/tr&gt;</div>
+              <div>&lt;/table&gt;</div>
+            </code>
+          </div>
+          <div class="col-md-6">
+            <table>
+              <thead>
+                <th>Number</th>
+                <th>Name</th>
+              </thead>
+              <tr>
+                <td>7</td>
+                <td>Guedes</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Zaza</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2>Formuláře</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <code>
+              <div>&lt;form class="" action="" method=""&gt;</div>
+                <div class="fcas">&lt;h2&gt;&lt;/h2&gt;</div>
+                <div class="fcas">&lt;label&gt;Poznámka:</div>
+                <div class="fcas">&lt;input type="text" name="" value="Text input"&gt;</div>
+                <div class="fcas">&lt;/label&gt;</div>
+                <div class="fcas">&lt;label for="userinputex"&gt;Email:&lt;/label&gt;</div>
+                <div class="fcas">&lt;input id="userinputex" type="email" name="useremail" value="" placeholder="Email input"&gt;</div>
+                <div class="fcas">&lt;input type="password" name="password" value=""&gt;</div>
+                <div class="fcas">&lt;input type="submit" name="" value="Submit"&gt;</div>
+                <div class="fcas">&lt;input type="checkbox" name="" value=""&gt;</div>
+                <div class="fcas">&lt;input type="color" name="" value=""&gt;</div>
+                <div class="fcas">&lt;input type="date" name="" value=""&gt;</div>
+              <div>&lt;/form&gt;</div>
+            </code>
+          </div>
+          <div class="col-md-6">
+            <form class="" action="index.html" method="post">
+              <h2>Log In</h2>
+              <div>
+                <label>Poznámka:
+                  <input type="text" name="" value="Text input">
+                </label>
+              </div>
+              <div>
+                <label for="userinputex">Email:</label>
+                <input id="userinputex" type="email" name="useremail" value="" placeholder="Email input">
+              </div>
+              <div><input type="password" name="password" value=""></div>
+              <div><input type="submit" name="" value="Submit"></div>
+              <div><input type="checkbox" name="" value=""></div>
+              <div><input type="color" name="" value=""></div>
+              <div><input type="date" name="" value=""></div>
+
+            </form>
+          </div>
+
+      </div>
+      <h2>Formulář example</h2>
+      <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+          <form class="" action="http://www.valenciacf.cz/" method="get">
+            <p>Enter text and take me to VCF</p>
+            <label for="vcfinp">Pošli to do VCF:</label>
+            <input id="vcfinp" type="text" name="userinput" value="">
+            <input type="submit" name="" value="Submit">
+          </form>
+        </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+    </div> -->
+
+      <!-- <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div> -->
+      <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div>
+      <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div>
+      <div class="words">
+        <span class="eng"></span> - <span class="cz"></span>
+        <div class="note"></div>
+        <hr>
+      </div>
+
+
+      <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+
+      <script src="http://r28.cz/js/jquery-3.3.1.slim.min.js"></script>
+      <script src="http://r28.cz/js/popper.min.js"></script>
+      <script src="http://r28.cz/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
